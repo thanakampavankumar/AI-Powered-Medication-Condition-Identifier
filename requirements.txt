@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-pandas
-numpy
-matplotlib
-seaborn
-nltk
-vaderSentiment
-scikit-learn
-dill
-Flask
-gunicorn
+
 nltk.stem
-=======
 pandas==2.2.3
 numpy==2.2.5
 matplotlib==3.10.1
@@ -21,4 +10,3 @@ scikit-learn==1.6.1
 dill==0.4.0
 Flask==3.1.0
 gunicorn==23.0.0
->>>>>>> c7a162bbf7b19a92f14e874a03bf5da73ceb8918
