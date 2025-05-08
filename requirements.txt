@@ -6,4 +6,6 @@ nltk
 vaderSentiment
 scikit-learn
 dill
-flask
+Flask
+gunicorn
+os
