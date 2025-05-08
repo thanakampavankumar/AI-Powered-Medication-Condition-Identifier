@@ -2,7 +2,13 @@ from flask import Flask, request, render_template
 import dill
 import pickle
 import os
+  # This is optional, for multilingual support
+import nltk
+from nltk.stem import WordNetLemmatizer
 
+# Ensure the required resources are downloaded
+nltk.download('wordnet')
+nltk.download('omw-1.4')  # Optional, if you need multilingual support
 # Correct file names
 with open("grid_log.pkl", "rb") as f:
     model = pickle.load(f)
