@@ -8,4 +8,4 @@ scikit-learn
 dill
 Flask
 gunicorn
-os
+nltk.stem
