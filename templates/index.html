@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Medication Experience</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>
+      <i class="fa-solid fa-heart-circle-check heart-icon"></i>
+      Your Medication Experience
+    </h2>
+
+    <form method="post" action="/predict">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="John Doe" required>
+
+      <label>Medication Name</label>
+      <input type="text" name="medication" placeholder="Aspirin, Lisinopril, etc." required>
+
+      <label>Your Experience <span class="note">(Our AI will identify your condition)</span></label>
+      <textarea name="review" placeholder="Please share your experience with this medication..." required></textarea>
+
+      {% if condition %}
+      <div class="condition-box">
+        <i class="fa-solid fa-heart-circle-check heart-icon"></i>
+        <span>Identified Condition:</span>
+        <strong>{{ condition }}</strong>
+      </div>
+      {% endif %}
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </div>
+</body>
+</html>
